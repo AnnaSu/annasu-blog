@@ -1,12 +1,28 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Navbar from '../components/Navbar';
+import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'polished';
 import useSiteMetadata from './SiteMetadata';
+import Header from './Header';
+import { highlight } from './highlight';
+import COLOR from '../constants/colors.js';
+
+const GlobalStyle = createGlobalStyle`
+  ${normalize()}
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    background-color: ${COLOR.DEFAULT_BG};
+  }
+  ${highlight()}
+`;
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div>
+      <GlobalStyle />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -42,7 +58,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <Navbar />
+      <Header />
       <div>{children}</div>
     </div>
   );
