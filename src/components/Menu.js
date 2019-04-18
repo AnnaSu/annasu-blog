@@ -107,11 +107,6 @@ class Menu extends Component {
             Life
           </MenuLink>
         </MenuItem>
-        <MenuItem>
-          <MenuLink to="/about" activeClassName="about">
-            About
-          </MenuLink>
-        </MenuItem>
       </MenuItems>
     );
   }
