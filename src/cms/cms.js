@@ -1,5 +1,7 @@
 import CMS from 'netlify-cms';
 
-import BlogPostPreview from './preview-templates/BlogPostPreview';
+import TechPostPreview from './preview-templates/TechPostPreview';
+import LifePostPreview from './preview-templates/LifePostPreview';
 
-CMS.registerPreviewTemplate('blog', BlogPostPreview);
+CMS.registerPreviewTemplate('tech', TechPostPreview);
+CMS.registerPreviewTemplate('life', LifePostPreview);
