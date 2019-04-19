@@ -98,6 +98,11 @@ class Menu extends Component {
     return (
       <MenuItems fixed={fixed}>
         <MenuItem>
+          <MenuLink to="/" activeClassName="about">
+            Me
+          </MenuLink>
+        </MenuItem>
+        <MenuItem>
           <MenuLink to="/tech" activeClassName="tech" partiallyActive>
             Tech
           </MenuLink>
