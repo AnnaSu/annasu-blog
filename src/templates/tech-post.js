@@ -10,7 +10,7 @@ import { CLIENT_ENDPOINT } from '../constants/endpoints';
 
 const category = 'tech';
 
-export const TechPostTemplate = ({ title, date, html, tags, helmet, url }) => {
+export const TechPostTemplate = ({ title, date, html, tags = [], helmet, url }) => {
   const color = THEME_COLOR[category];
 
   return (
