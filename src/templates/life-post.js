@@ -21,7 +21,6 @@ export const LifePostTemplate = ({
   ContentComponent = Content,
 }) => {
   const color = THEME_COLOR[category];
-  console.log(title, date, html, tags, helmet, url, ContentComponent);
   return (
     <div>
       {helmet}

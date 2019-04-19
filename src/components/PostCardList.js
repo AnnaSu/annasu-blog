@@ -25,7 +25,6 @@ class PostCardList extends Component {
       articles,
       category,
     } = this.props;
-    console.log(articles);
     return (
       <Cards>
         {articles.map((item, index) => (
