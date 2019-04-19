@@ -10,8 +10,7 @@ import { CLIENT_ENDPOINT } from '../constants/endpoints';
 
 const category = 'tech';
 
-export const TechPostTemplate = ({ title, date, html, tags, helmet, slug }) => {
-  const url = CLIENT_ENDPOINT + slug;
+export const TechPostTemplate = ({ title, date, html, tags, helmet, url }) => {
   const color = THEME_COLOR[category];
 
   return (
@@ -48,6 +47,7 @@ class index extends Component {
     const date = R.pathOr('', ['frontmatter', 'date'], post);
     const slug = R.pathOr('/', ['fields', 'slug'], post);
     const html = R.pathOr('', ['html'], post);
+    const url = CLIENT_ENDPOINT + slug;
     const helmet = (
       <Helmet>
         <title>{title}</title>
@@ -88,7 +88,7 @@ class index extends Component {
         date={date}
         html={html}
         tags={tags}
-        slug={slug}
+        url={url}
         helmet={helmet}
       />
     );
