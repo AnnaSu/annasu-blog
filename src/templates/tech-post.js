@@ -7,14 +7,23 @@ import PostArticle from '../components/PostArticle';
 import { THEME_COLOR } from '../constants/themes';
 import BackBar from '../components/BackBar';
 import { CLIENT_ENDPOINT } from '../constants/endpoints';
+import { HTMLContent, Content } from '../components/Content';
 
 const category = 'tech';
 
-export const TechPostTemplate = ({ title, date, html, tags = [], helmet, url }) => {
+export const TechPostTemplate = ({
+  title = '',
+  date = '',
+  html = '',
+  tags = [],
+  helmet = '',
+  url = '',
+  ContentComponent = Content,
+}) => {
   const color = THEME_COLOR[category];
-
+  console.log(title, date, html, tags, helmet, url, ContentComponent);
   return (
-    <Layout>
+    <div>
       {helmet}
       <PostArticle
         title={title}
@@ -25,6 +34,7 @@ export const TechPostTemplate = ({ title, date, html, tags = [], helmet, url }) 
         category={category}
         url={url}
         hashTags={tags.join(',')}
+        ContentComponent={ContentComponent}
       />
       <BackBar
         category={category}
@@ -32,7 +42,7 @@ export const TechPostTemplate = ({ title, date, html, tags = [], helmet, url }) 
         url={url}
         hashTags={tags.join(',')}
       />
-    </Layout>
+    </div>
   );
 };
 
@@ -46,8 +56,8 @@ class index extends Component {
     const tags = R.pathOr([], ['frontmatter', 'tags'], post);
     const date = R.pathOr('', ['frontmatter', 'date'], post);
     const slug = R.pathOr('/', ['fields', 'slug'], post);
-    const html = R.pathOr('', ['html'], post);
     const url = CLIENT_ENDPOINT + slug;
+    const html = R.pathOr('', ['html'], post);
     const helmet = (
       <Helmet>
         <title>{title}</title>
@@ -83,14 +93,17 @@ class index extends Component {
       </Helmet>
     );
     return (
-      <TechPostTemplate
-        title={title}
-        date={date}
-        html={html}
-        tags={tags}
-        url={url}
-        helmet={helmet}
-      />
+      <Layout>
+        <TechPostTemplate
+          title={title}
+          html={html}
+          tags={tags}
+          url={url}
+          date={date}
+          helmet={helmet}
+          ContentComponent={HTMLContent}
+        />
+      </Layout>
     );
   }
 }

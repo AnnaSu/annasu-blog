@@ -7,14 +7,23 @@ import PostArticle from '../components/PostArticle';
 import { THEME_COLOR } from '../constants/themes';
 import BackBar from '../components/BackBar';
 import { CLIENT_ENDPOINT } from '../constants/endpoints';
+import { HTMLContent, Content } from '../components/Content';
 
 const category = 'life';
 
-export const LifePostTemplate = ({ title, date, html, tags = [], helmet, url }) => {
+export const LifePostTemplate = ({
+  title = '',
+  date = '',
+  html = '',
+  tags = [],
+  helmet = '',
+  url = '',
+  ContentComponent = Content,
+}) => {
   const color = THEME_COLOR[category];
-
+  console.log(title, date, html, tags, helmet, url, ContentComponent);
   return (
-    <Layout>
+    <div>
       {helmet}
       <PostArticle
         title={title}
@@ -25,6 +34,7 @@ export const LifePostTemplate = ({ title, date, html, tags = [], helmet, url }) 
         category={category}
         url={url}
         hashTags={tags.join(',')}
+        ContentComponent={ContentComponent}
       />
       <BackBar
         category={category}
@@ -32,7 +42,7 @@ export const LifePostTemplate = ({ title, date, html, tags = [], helmet, url }) 
         url={url}
         hashTags={tags.join(',')}
       />
-    </Layout>
+    </div>
   );
 };
 
@@ -83,14 +93,17 @@ class index extends Component {
       </Helmet>
     );
     return (
-      <LifePostTemplate
-        title={title}
-        html={html}
-        tags={tags}
-        url={url}
-        date={date}
-        helmet={helmet}
-      />
+      <Layout>
+        <LifePostTemplate
+          title={title}
+          html={html}
+          tags={tags}
+          url={url}
+          date={date}
+          helmet={helmet}
+          ContentComponent={HTMLContent}
+        />
+      </Layout>
     );
   }
 }

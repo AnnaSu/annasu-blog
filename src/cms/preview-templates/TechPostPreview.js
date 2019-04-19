@@ -7,7 +7,6 @@ const TechPostPreview = ({ entry, widgetFor }) => (
     date={entry.getIn(['data', 'date'])}
     description={entry.getIn(['data', 'description'])}
     html={widgetFor('body')}
-    tags={entry.getIn(['data', 'tags'])}
   />
 );
 
