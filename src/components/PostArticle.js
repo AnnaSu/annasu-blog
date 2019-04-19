@@ -71,7 +71,7 @@ class PostArticle extends Component {
       tags,
       color,
       category,
-      Content,
+      ContentComponent,
     } = this.props;
 
     return (
@@ -87,10 +87,10 @@ class PostArticle extends Component {
               hashtags={hashtags}
             />
           </Infos>
-          <Content
+          <ContentComponent
             color={color}
             category={category}
-            dangerouslySetInnerHTML={{ __html: html }}
+            html={html}
           />
           <Tags tags={tags} color={color} category={category} />
         </Article>
