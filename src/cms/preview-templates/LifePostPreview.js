@@ -1,13 +1,14 @@
-import React from 'react'
-import LifePost from '../../templates/life-post.js'
+import React from 'react';
+import { LifePostTemplate } from '../../templates/life-post.js';
 
 const LifePostPreview = ({ entry, widgetFor }) => (
-  <LifePost
-    content={widgetFor('body')}
-    description={entry.getIn(['data', 'description'])}
-    tags={entry.getIn(['data', 'tags'])}
+  <LifePostTemplate
     title={entry.getIn(['data', 'title'])}
+    date={entry.getIn(['data', 'date'])}
+    description={entry.getIn(['data', 'description'])}
+    html={widgetFor('body')}
+    tags={entry.getIn(['data', 'tags'])}
   />
-)
+);
 
-export default LifePostPreview
+export default LifePostPreview;

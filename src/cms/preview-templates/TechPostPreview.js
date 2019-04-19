@@ -1,12 +1,13 @@
 import React from 'react';
-import TechPost from '../../templates/tech-post.js';
+import { TechPostTemplate } from '../../templates/tech-post.js';
 
 const TechPostPreview = ({ entry, widgetFor }) => (
-  <TechPost
-    content={widgetFor('body')}
-    description={entry.getIn(['data', 'description'])}
-    tags={entry.getIn(['data', 'tags'])}
+  <TechPostTemplate
     title={entry.getIn(['data', 'title'])}
+    date={entry.getIn(['data', 'date'])}
+    description={entry.getIn(['data', 'description'])}
+    html={widgetFor('body')}
+    tags={entry.getIn(['data', 'tags'])}
   />
 );
 

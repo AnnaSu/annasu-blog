@@ -10,36 +10,55 @@ import { CLIENT_ENDPOINT } from '../constants/endpoints';
 
 const category = 'tech';
 
+export const TechPostTemplate = ({ title, date, html, tags, helmet, slug }) => {
+  const url = CLIENT_ENDPOINT + slug;
+  const color = THEME_COLOR[category];
+
+  return (
+    <Layout>
+      {helmet}
+      <PostArticle
+        title={title}
+        date={date}
+        html={html}
+        tags={tags}
+        color={color}
+        category={category}
+        url={url}
+        hashTags={tags.join(',')}
+      />
+      <BackBar
+        category={category}
+        title={title}
+        url={url}
+        hashTags={tags.join(',')}
+      />
+    </Layout>
+  );
+};
+
 class index extends Component {
   render() {
     const {
       data: { markdownRemark: post },
     } = this.props;
-    const color = THEME_COLOR[category];
     const title = R.pathOr('', ['frontmatter', 'title'], post);
     const description = R.pathOr('', ['frontmatter', 'description'], post);
     const tags = R.pathOr([], ['frontmatter', 'tags'], post);
     const date = R.pathOr('', ['frontmatter', 'date'], post);
-    const url = R.pipe(
-      R.pathOr('/', ['fields', 'slug']),
-      R.concat(CLIENT_ENDPOINT)
-    )(post);
-    return (
-      <Layout>
-        <Helmet>
-          <title>{title}</title>
-          <meta name="description" content={description} />
-          <meta property="og:title" content={title} />
-          <meta property="og:description" content={description} />
-          <meta property="og:url" content={url} />
-          <script type="application/ld+json">{`
+    const slug = R.pathOr('/', ['fields', 'slug'], post);
+    const html = R.pathOr('', ['html'], post);
+    const helmet = (
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <script type="application/ld+json">{`
                        {
                         "@context": "http://schema.org/",
-                        "@type": "${
-                          category === 'tech'
-                            ? 'TechArticle'
-                            : 'SocialMediaPosting'
-                        }",
+                        "@type": "TechArticle",
                         "headline": "${title}",
                         "datePublished": "${date}",
                         "description": "${description}",
@@ -61,24 +80,17 @@ class index extends Component {
                         }
                       }
                     `}</script>
-        </Helmet>
-        <PostArticle
-          title={title}
-          date={date}
-          html={R.pathOr('', ['html'], post)}
-          tags={tags}
-          color={color}
-          category={category}
-          url={url}
-          hashTags={tags.join(',')}
-        />
-        <BackBar
-          category={category}
-          title={title}
-          url={url}
-          hashTags={tags.join(',')}
-        />
-      </Layout>
+      </Helmet>
+    );
+    return (
+      <TechPostTemplate
+        title={title}
+        date={date}
+        html={html}
+        tags={tags}
+        slug={slug}
+        helmet={helmet}
+      />
     );
   }
 }
