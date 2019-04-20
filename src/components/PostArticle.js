@@ -46,8 +46,6 @@ const Date = styled.span`
   color: ${COLOR.GRAY};
 `;
 
-
-
 class PostArticle extends Component {
   static defaultProps = {
     title: '',
@@ -86,11 +84,7 @@ class PostArticle extends Component {
               hashtags={hashtags}
             />
           </Infos>
-          <ContentComponent
-            color={color}
-            category={category}
-            html={html}
-          />
+          <ContentComponent color={color} category={category} html={html} />
           <Tags tags={tags} color={color} category={category} />
         </Article>
       </Wrap>
