@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 import COLOR from '../constants/colors';
-import { THEME_LIGHT_COLOR } from '../constants/themes';
 import Tags from './Tags';
 import media from '../utils/mediaQueries';
 import ShareLinks from './ShareLinks';
