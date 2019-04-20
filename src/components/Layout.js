@@ -24,7 +24,7 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <GlobalStyle />
       <Helmet>
-        <html lang="en" />
+        <html lang="zh-Hant-TW" />
         <title>{title}</title>
         <meta name="description" content={description} />
         <link
@@ -38,11 +38,21 @@ const TemplateWrapper = ({ children }) => {
           href="/img/favicon.ico"
           sizes="32x32"
         />
-        <meta name="theme-color" content="#fff" />
-        <meta property="og:type" content="business.business" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="theme-color" content="#61c8e0" />
+        <meta name="author" content="Anna Su" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.png" />
+        <meta property="og:site_name" content="Anna Su notes" />
+        <meta property="og:locale" content="zh_TW" />
+        <meta property="fb:app_id" content="289180075235583" />
       </Helmet>
       <Header />
       <div>{children}</div>
