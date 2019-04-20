@@ -19,6 +19,12 @@ const Card = styled.li`
   `};
 `;
 
+const CardLink = styled(Link)`
+  display: grid;
+  text-decoration: none;
+  color: ${COLOR.PRIMARY_FONT};
+`;
+
 const Cover = styled.img.attrs({
   src: props => props.src,
 })`
@@ -58,15 +64,6 @@ const Desc = styled.p`
   padding-left: 20px;
 `;
 
-const More = styled(Link)`
-  display: inline-block;
-  padding-left: 20px;
-  padding-bottom: 40px;
-  text-decoration: none;
-  cursor: pointer;
-  color: ${props => props.color};
-`;
-
 class PostCard extends Component {
   static defaultProps = {
     id: '',
@@ -83,13 +80,12 @@ class PostCard extends Component {
 
     return (
       <Card>
-        {cover && <Cover src={cover} color={color} alt="" />}
-        <Date>{date && moment(date).format('MMM.DD.YYYY')}</Date>
-        <Title color={color}>{title}</Title>
-        <Desc>{desc}</Desc>
-        <More color={color} to={slug}>
-          Read more...
-        </More>
+        <CardLink to={slug}>
+          {cover && <Cover src={cover} color={color} alt="" />}
+          <Date>{date && moment(date).format('MMM.DD.YYYY')}</Date>
+          <Title color={color}>{title}</Title>
+          <Desc>{desc}</Desc>
+        </CardLink>
       </Card>
     );
   }
