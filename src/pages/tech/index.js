@@ -33,6 +33,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            cover  
             date
             tags
             title

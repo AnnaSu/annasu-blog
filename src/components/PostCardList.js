@@ -31,7 +31,7 @@ class PostCardList extends Component {
           <PostCard
             key={R.path(['node', 'fields', 'slug'], item)}
             slug={R.path(['node', 'fields', 'slug'], item)}
-            cover={''}
+            cover={R.path(['node', 'frontmatter', 'cover'], item)}
             date={R.path(['node', 'frontmatter', 'date'], item)}
             title={R.path(['node', 'frontmatter', 'title'], item)}
             desc={R.path(['node', 'frontmatter', 'description'], item)}
