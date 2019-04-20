@@ -1,4 +1,5 @@
 import React from 'react';
+import * as R from 'ramda';
 import { LifePostTemplate } from '../../templates/life-post.js';
 
 const LifePostPreview = ({ entry, widgetFor }) => (
@@ -7,7 +8,7 @@ const LifePostPreview = ({ entry, widgetFor }) => (
     date={entry.getIn(['data', 'date'])}
     description={entry.getIn(['data', 'description'])}
     html={widgetFor('body')}
-    tags={entry.getIn(['data', 'tags']).toJS()}
+    tags={R.pathOr([], ['data', 'tags'], entry.toJS())}
   />
 );
 

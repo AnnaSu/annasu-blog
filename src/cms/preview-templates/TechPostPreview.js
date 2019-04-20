@@ -1,4 +1,5 @@
 import React from 'react';
+import * as R from 'ramda';
 import { TechPostTemplate } from '../../templates/tech-post.js';
 
 const TechPostPreview = ({ entry, widgetFor }) => (
@@ -7,7 +8,7 @@ const TechPostPreview = ({ entry, widgetFor }) => (
     date={entry.getIn(['data', 'date'])}
     description={entry.getIn(['data', 'description'])}
     html={widgetFor('body')}
-    tags={entry.getIn(['data', 'tags']).toJS()}
+    tags={R.pathOr([], ['data', 'tags'], entry.toJS())}
   />
 );
 
