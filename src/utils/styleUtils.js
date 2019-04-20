@@ -14,7 +14,7 @@ export const limitLine = (width, fontSize, lineHeight, limitNumber) => {
     display: block;
     display: -webkit-box;
     max-width: ${width};
-    height: ${fontSize * lineHeight * limitNumber}px;
+    max-height: ${fontSize * lineHeight * limitNumber}px;
     font-size: ${fontSize}px;
     line-height: ${lineHeight};
     -webkit-line-clamp: ${limitNumber};

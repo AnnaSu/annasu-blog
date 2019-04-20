@@ -45,23 +45,23 @@ const Cover = styled.img.attrs({
 `;
 
 const Date = styled.p`
-  margin: 0;
-  padding-top: 40px;
-  padding-left: 20px;
+  margin-top: 20px;
+  padding: 0 20px;
   font-size: 14px;
   color: ${COLOR.GRAY};
 `;
 
 const Title = styled.h1`
   ${ellipsis('650px')};
-  padding-left: 15px;
+  padding: 0 15px;
   font-size: 18px;
   border-left: 4px solid ${props => props.color};
 `;
 
 const Desc = styled.p`
   ${limitLine('650px', 16, 2, 2)};
-  padding-left: 20px;
+  margin-top: 0px;
+  padding: 0 20px;
 `;
 
 class PostCard extends Component {
