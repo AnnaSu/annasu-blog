@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: "tech"
     label: "Tech"
-    folder: "src/pages/life"
+    folder: "src/pages/tech"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
