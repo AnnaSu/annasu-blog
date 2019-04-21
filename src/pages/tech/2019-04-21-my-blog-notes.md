@@ -1,5 +1,5 @@
 ---
-id: my-blog-notes
+id: my-blog-notes-1
 templateKey: tech-post
 title: 個人 Blog 網站開發紀錄
 date: 2019-04-21T07:28:59.225Z
