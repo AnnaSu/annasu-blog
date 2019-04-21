@@ -1,6 +1,7 @@
 ---
 id: about-life
 templateKey: life-post
+cover: /img/og-image.png
 title: 關於 Life
 date: 2019-04-21T07:08:06.986Z
 description: 說明一下，Life 這個分類要寫些什麼吧！
