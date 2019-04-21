@@ -26,6 +26,7 @@ export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "life-post" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
