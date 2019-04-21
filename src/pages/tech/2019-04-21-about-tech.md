@@ -1,14 +1,12 @@
 ---
+id: about-tech
 templateKey: tech-post
-cover: 'http://res.cloudinary.com/annasu/image/upload/v1536572679/Life/tech.jpg'
-title: About Tech
-date: 2019-04-20T08:46:00.194Z
+title: 關於 Tech
+date: 2019-04-21T07:22:27.302Z
 description: 說明一下，Tech 這個分類要寫些什麼吧！
 tags:
   - about
 ---
-![](http://res.cloudinary.com/annasu/image/upload/v1536572679/Life/tech.jpg)
-
 說明一下，Tech 這個分類要寫些什麼吧！
 
 Tech 分類，打算來寫一些像是：
