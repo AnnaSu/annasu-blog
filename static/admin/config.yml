@@ -14,12 +14,12 @@ collections:
     fields:
       - {label: "Url name", name: "id", widget: "string"}
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tech-post"}
-      - {label: "Cover", name: "cover", widget: "image"}
+      - {label: "Cover", name: "cover", widget: "image", required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
   - name: "life"
     label: "Life"
     folder: "src/pages/life"
