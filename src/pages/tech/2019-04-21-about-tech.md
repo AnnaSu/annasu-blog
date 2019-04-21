@@ -1,6 +1,7 @@
 ---
 id: about-tech
 templateKey: tech-post
+cover: null
 title: 關於 Tech
 date: 2019-04-21T07:22:27.302Z
 description: 說明一下，Tech 這個分類要寫些什麼吧！

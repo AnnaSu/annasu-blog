@@ -1,6 +1,7 @@
 ---
 id: my-blog-notes-2
 templateKey: tech-post
+cover: null
 title: 個人 Blog 開發技術評估
 date: 2019-04-21T07:33:02.991Z
 description: |-
