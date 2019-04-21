@@ -26,7 +26,7 @@ description: |-
 
 以 Blog 網站為例，繪製簡單的架構圖，用來說明這一連串的存取流程：
 
-<img src="https://res.cloudinary.com/annasu/image/upload/c_scale,w_700/v1537370846/Tech/CleanShot_2018-09-19_at_23.26.16_2x.png" width="700" height="514"/>
+<img src="https://res.cloudinary.com/annasu/image/upload/v1537416599/Tech/CleanShot_2018-09-20_at_12.09.10_2x.png" width="700" height="514"/>
 
 * 從使用者輸入網址開始，透過瀏覽器發出第一個 Request。
 * 第一次 Request 會回傳完整的 HTML 檔案，顯示在瀏覽器的畫面上。
