@@ -15,10 +15,11 @@ const Wrap = styled.div`
 class Header extends Component {
   render() {
     // TODO: Show Search component
+    const { scroll$ } = this.props;
     return (
       <Wrap>
         <Logo />
-        <Menu />
+        <Menu scroll$={scroll$} />
       </Wrap>
     );
   }

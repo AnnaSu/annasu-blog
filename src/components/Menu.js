@@ -79,18 +79,18 @@ class Menu extends Component {
   };
 
   componentDidMount() {
-    // const { scroll$ } = this.props;
-    // scroll$.subscribe(x => {
-    //   if (!this.state.fixed && x >= 50) {
-    //     this.setState({
-    //       fixed: true,
-    //     });
-    //   } else if (this.state.fixed && x < 50){
-    //     this.setState({
-    //       fixed: false,
-    //     });
-    //   }
-    // });
+    const { scroll$ } = this.props;
+    scroll$.subscribe(x => {
+      if (!this.state.fixed && x >= 50) {
+        this.setState({
+          fixed: true,
+        });
+      } else if (this.state.fixed && x < 50) {
+        this.setState({
+          fixed: false,
+        });
+      }
+    });
   }
 
   render() {

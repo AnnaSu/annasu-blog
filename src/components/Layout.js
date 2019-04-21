@@ -6,6 +6,8 @@ import useSiteMetadata from './SiteMetadata';
 import Header from './Header';
 import { highlight } from './highlight';
 import COLOR from '../constants/colors.js';
+import ScrollTopButton from './ScrollTopButton';
+import ScrollView from './ScrollView';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize()}
@@ -21,42 +23,47 @@ const GlobalStyle = createGlobalStyle`
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div>
-      <GlobalStyle />
-      <Helmet>
-        <html lang="zh-Hant-TW" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/img/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/img/favicon.ico"
-          sizes="32x32"
-        />
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="theme-color" content="#61c8e0" />
-        <meta name="author" content="Anna Su" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og-image.png" />
-        <meta property="og:site_name" content="Anna Su notes" />
-        <meta property="og:locale" content="zh_TW" />
-        <meta property="fb:app_id" content="289180075235583" />
-      </Helmet>
-      <Header />
-      <div>{children}</div>
-    </div>
+    <ScrollView>
+      {scroll$ => (
+        <React.Fragment>
+          <GlobalStyle />
+          <Helmet>
+            <html lang="zh-Hant-TW" />
+            <title>{title}</title>
+            <meta name="description" content={description} />
+            <link
+              rel="apple-touch-icon"
+              sizes="180x180"
+              href="/img/apple-touch-icon.png"
+            />
+            <link
+              rel="icon"
+              type="image/png"
+              href="/img/favicon.ico"
+              sizes="32x32"
+            />
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            />
+            <meta name="theme-color" content="#61c8e0" />
+            <meta name="author" content="Anna Su" />
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content={title} />
+            <meta property="og:url" content="/" />
+            <meta property="og:image" content="/img/og-image.png" />
+            <meta property="og:site_name" content="Anna Su notes" />
+            <meta property="og:locale" content="zh_TW" />
+            <meta property="fb:app_id" content="289180075235583" />
+          </Helmet>
+          <Header scroll$={scroll$} />
+          <div>{children}</div>
+          <ScrollTopButton scroll$={scroll$} />
+        </React.Fragment>
+      )}
+    </ScrollView>
   );
 };
 
