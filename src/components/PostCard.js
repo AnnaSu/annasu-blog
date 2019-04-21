@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ellipsis } from 'polished';
 import { Link } from 'gatsby';
 import moment from 'moment';
+import Image from 'gatsby-image';
 import COLOR from '../constants/colors';
 import { limitLine } from '../utils/styleUtils';
 import { THEME_COLOR } from '../constants/themes';
@@ -23,25 +24,6 @@ const CardLink = styled(Link)`
   display: grid;
   text-decoration: none;
   color: ${COLOR.PRIMARY_FONT};
-`;
-
-const Cover = styled.img.attrs({
-  src: props => props.src,
-})`
-  display: inline-block;
-  width: 700px;
-  height: 240px;
-  border: 0;
-  object-fit: cover;
-  background-color: ${props => props.color};
-  background-image: url('/img/icon-image.svg');
-  background-size: 60px 60px;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  ${media.mobile`
-    width: 100%;
-  `};
 `;
 
 const Date = styled.p`
@@ -81,7 +63,7 @@ class PostCard extends Component {
     return (
       <Card>
         <CardLink to={slug}>
-          {cover && <Cover src={cover} color={color} alt="" />}
+          {cover && <Image fluid={cover} />}
           <Date>{date && moment(date).format('MMM.DD.YYYY')}</Date>
           <Title color={color}>{title}</Title>
           <Desc>{desc}</Desc>
