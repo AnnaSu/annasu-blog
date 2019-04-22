@@ -2,11 +2,16 @@
 id: my-blog-notes-1
 templateKey: tech-post
 title: 個人 Blog 網站開發紀錄
-date: 2019-04-22T08:32:51.015Z
+date: 2018-04-22T08:32:00.000Z
 description: 本篇文章不是教學文，主要紀錄個人 Blog 所使用到的開發技術，以及實作的小小心得。
 ---
-本篇文章不是教學文，
-主要紀錄個人 Blog 所使用到的開發技術，以及實作的小小心得。
+
+`2019 更新`
+
+> 個人 Blog 改用 Gatsby on Netlify
+
+
+以下是 `2018 的舊筆記`
 
 由於需要 API 、顯示前台與管理後台，
 所以我新增了 3 個 Repositories，依序開發如下：
