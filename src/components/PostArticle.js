@@ -22,6 +22,8 @@ const Article = styled.article`
   margin: 0 auto;
   ${media.mobile`
     width: 100%;
+    /* 50px = back bar's height */
+    padding-bottom: 50px;
   `};
 `;
 
