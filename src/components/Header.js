@@ -7,7 +7,7 @@ import Logo from './Logo';
 const Wrap = styled.div`
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 90px;
   box-shadow: 0 3px 8px ${COLOR.LIGHT_GRAY};
   background-color: ${COLOR.WHITE};
 `;

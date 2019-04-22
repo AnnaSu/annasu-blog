@@ -5,7 +5,7 @@ import media from '../utils/mediaQueries';
 
 const LogoWithLink = styled(Link)`
   position: absolute;
-  top: 25px;
+  top: 23px;
   left: 60px;
   width: 150px;
   height: 45px;

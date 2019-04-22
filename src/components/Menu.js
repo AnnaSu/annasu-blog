@@ -8,8 +8,8 @@ const MenuItems = styled.ul`
   display: flex;
   margin: 0 300px;
   width: 700px;
-  height: 100px;
-  line-height: 120px;
+  height: 90px;
+  line-height: 110px;
   padding: 0;
   list-style: none;
   ${media.mobile`
@@ -64,7 +64,7 @@ const MenuItem = styled.li`
 const MenuLink = styled(Link)`
   display: inline-block;
   width: 100%;
-  height: 100px;
+  height: 90px;
   opacity: 0.4;
   text-decoration: none;
   color: ${COLOR.PRIMARY_FONT};
