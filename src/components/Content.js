@@ -76,6 +76,10 @@ const StyledContent = styled.div`
         color: ${props => props.color};
       }
 
+      p {
+        display: inline;
+      }
+
       li {
         &::before {
           content: '◦';
@@ -104,6 +108,10 @@ const StyledContent = styled.div`
         content: counter(li) '.';
         padding-right: 15px;
         color: ${props => props.color};
+      }
+
+      p {
+        display: inline;
       }
     }
   }
