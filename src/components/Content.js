@@ -122,7 +122,10 @@ const StyledContent = styled.div`
   }
 `;
 
+export const HTMLContent = ({ html, ...rest }) => (
+  <StyledContent {...rest} dangerouslySetInnerHTML={{ __html: html }} />
+);
 
-export const HTMLContent = ({ html, ...rest }) => <StyledContent {...rest} dangerouslySetInnerHTML={{ __html: html }} />
-
-export const Content = ({ html = '', ...rest }) => <StyledContent {...rest}>{html}</StyledContent>;
+export const Content = ({ html = '', ...rest }) => (
+  <StyledContent {...rest}>{html}</StyledContent>
+);
