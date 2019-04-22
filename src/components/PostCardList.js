@@ -6,7 +6,7 @@ import * as R from 'ramda';
 
 const Cards = styled.ul`
   width: 700px;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
   padding: 0;
   list-style: none;
   ${media.mobile`

@@ -11,7 +11,7 @@ import media from '../utils/mediaQueries';
 
 const Card = styled.li`
   width: 700px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background-color: ${COLOR.WHITE};
   border: solid 1px ${COLOR.LIGHT_GRAY};
   ${media.mobile`

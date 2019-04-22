@@ -8,7 +8,7 @@ import ShareLinks from './ShareLinks';
 
 const Wrap = styled.div`
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 55px 0;
   background-color: ${COLOR.WHITE};
   ${media.mobile`
