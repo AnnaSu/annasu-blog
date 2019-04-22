@@ -1,7 +1,6 @@
 ---
 id: my-blog-notes-2
 templateKey: tech-post
-cover: null
 title: 個人 Blog 開發技術評估
 date: 2019-04-21T07:33:02.991Z
 description: |-
@@ -31,11 +30,11 @@ description: |-
 
 * 從使用者輸入網址開始，透過瀏覽器發出第一個 Request。
 * 第一次 Request 會回傳完整的 HTML 檔案，顯示在瀏覽器的畫面上。
-	* 流程可以參考綠色箭頭，從瀏覽器發 Request 開始，會經過 `Web Server` 和 `API Server` ，最後從 `DB` Response HTML 檔案回到瀏覽器。
-	* 這裡的 `API Server` 是使用 `GraphQL`
+  * 流程可以參考綠色箭頭，從瀏覽器發 Request 開始，會經過 `Web Server` 和 `API Server` ，最後從 `DB` Response HTML 檔案回到瀏覽器。
+  * 這裡的 `API Server` 是使用 `GraphQL`
 * 之後所有的 Request 都直接透過 `API Server` (Node.js) => `DB` 回傳我們需要顯示的 API 動態資料。
-	* 流程可以參考藍色箭頭
-	* 這個時候即使 Disable JavaScript，Blog 網站也能夠正常顯示。
+  * 流程可以參考藍色箭頭
+  * 這個時候即使 Disable JavaScript，Blog 網站也能夠正常顯示。
 
 針對 SSR，可以參考：
 
@@ -49,7 +48,7 @@ description: |-
 
 * 參考公司專案使用 GCP，跟著大大一起飛。
 * 獲得 300 美元試用額度。
-	* 但為了避免出現服務中斷等風險，Blog 網站上線後已改成付費版本。
+  * 但為了避免出現服務中斷等風險，Blog 網站上線後已改成付費版本。
 * 曾參加 GCP 小型技術分享會，期間也有申請免費帳號、跟著玩玩看。
 * GCP 有台灣機房，ASIA-EAST1 位於彰化。
 
