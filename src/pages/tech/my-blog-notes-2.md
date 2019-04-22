@@ -1,8 +1,9 @@
 ---
-id: my-blog-notes-2
+slug: my-blog-notes-2
 templateKey: tech-post
+cover: null
 title: 個人 Blog 開發技術評估
-date: 2019-04-22T08:34:00.460Z
+date: 2018-04-22T08:34:00.460Z
 description: |-
   針對本網站裡 Back-end、Databases、Infrastructure 所使用到的技術，
 

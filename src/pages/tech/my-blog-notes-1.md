@@ -1,6 +1,7 @@
 ---
-id: my-blog-notes-1
+slug: my-blog-notes-1
 templateKey: tech-post
+cover: null
 title: 個人 Blog 網站開發紀錄
 date: 2018-04-22T08:32:00.000Z
 description: 本篇文章不是教學文，主要紀錄個人 Blog 所使用到的開發技術，以及實作的小小心得。

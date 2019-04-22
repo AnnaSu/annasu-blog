@@ -1,6 +1,7 @@
 ---
-id: about-life
+slug: about-life
 templateKey: life-post
+cover: null
 title: 關於 Life
 date: 2018-04-22T08:12:00.000Z
 description: 說明一下，Life 這個分類要寫些什麼吧！

@@ -1,6 +1,7 @@
 ---
-id: about-tech
+slug: about-tech
 templateKey: tech-post
+cover: /img/og-image.png
 title: 關於 Tech
 date: 2018-04-21T07:22:00.000Z
 description: 說明一下，Tech 這個分類要寫些什麼吧！

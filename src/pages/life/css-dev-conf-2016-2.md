@@ -1,6 +1,7 @@
 ---
-id: css-dev-conf-2016-2
+slug: css-dev-conf-2016-2
 templateKey: life-post
+cover: null
 title: 前進 CSS Dev Conf 2016 (下)
 date: 2018-04-22T08:20:00.000Z
 description: |-
