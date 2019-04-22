@@ -10,9 +10,9 @@ collections:
     label: "Tech"
     folder: "src/pages/tech"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{id}}"
+    slug: "{{fields.slug}}"
     fields:
-      - {label: "Url name", name: "id", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tech-post"}
       - {label: "Cover", name: "cover", widget: "image", required: false, default: null}
       - {label: "Title", name: "title", widget: "string"}
@@ -24,9 +24,9 @@ collections:
     label: "Life"
     folder: "src/pages/life"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{id}}"
+    slug: "{{fields.slug}}"
     fields:
-      - {label: "Url name", name: "id", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "life-post"}
       - {label: "Cover", name: "cover", widget: "image", required: false, default: null}
       - {label: "Title", name: "title", widget: "string"}
