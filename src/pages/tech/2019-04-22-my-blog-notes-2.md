@@ -10,13 +10,12 @@ description: |-
 
   我不是這些領域的專家，只是分享一個前端工程師從零開始挑戰的紀錄。
 ---
-針對本網站裡 Back-end、Databases、Infrastructure 所使用到的技術，
+`2019 更新`
 
-我是怎麼評估使用該技術以及替我解決什麼問題？
+> 個人 Blog 改用 Gatsby on Netlify
 
-我不是這些領域的專家，只是分享一個前端工程師從零開始挑戰的紀錄。
 
----
+以下是 `2018 的舊筆記`
 
 ### SSR(Server-side Rendering)
 
@@ -73,7 +72,7 @@ PostgreSQL 是一個免費開源的物件關聯式資料庫管理系統(ORDBMS)�
 
 * OPEN SOURCE
 * THE WORLD'S MOST ADVANCED OPEN SOURCE RELATIONAL DATABASE
-	* [PostgreSQL 官網](https://www.postgresql.org/) 表示這是全球最先進的開源關聯式資料庫。
+  * [PostgreSQL 官網](https://www.postgresql.org/) 表示這是全球最先進的開源關聯式資料庫。
 * PostgreSQL 是依據美國國家標準協會(ANSI) 所定義的標準進行實作。
 
 ---
