@@ -9,7 +9,7 @@ description: |-
   有沒有機會到厲害的公司參觀看看？
 tags:
   - San Francisco
-  - css-dev-conf
+  - CSS Dev Conf
   - '2016'
 ---
 2016 的 10 月，
