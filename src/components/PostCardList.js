@@ -21,17 +21,17 @@ class PostCardList extends Component {
     category: '',
   };
   render() {
-    const {
-      articles,
-      category,
-    } = this.props;
+    const { articles, category } = this.props;
     return (
       <Cards>
         {articles.map((item, index) => (
           <PostCard
             key={R.path(['node', 'fields', 'slug'], item)}
             slug={R.path(['node', 'fields', 'slug'], item)}
-            cover={R.path(['node', 'frontmatter', 'cover', 'childImageSharp', 'fluid'], item)}
+            cover={R.path(
+              ['node', 'frontmatter', 'cover', 'childImageSharp', 'fluid'],
+              item
+            )}
             date={R.path(['node', 'frontmatter', 'date'], item)}
             title={R.path(['node', 'frontmatter', 'title'], item)}
             desc={R.path(['node', 'frontmatter', 'description'], item)}
