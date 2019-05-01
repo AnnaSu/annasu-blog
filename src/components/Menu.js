@@ -37,7 +37,8 @@ const MenuItem = styled.li`
 
   .tech,
   .life,
-  .about {
+  .about,
+  .tags {
     border-bottom-width: 5px;
     border-bottom-style: solid;
     opacity: 1;
@@ -48,15 +49,20 @@ const MenuItem = styled.li`
   }
 
   .life {
-    border-color: ${COLOR.PRIMARY_PINK};
+    border-color: ${COLOR.PRIMARY_RED};
   }
 
   .about {
+    border-color: ${COLOR.PRIMARY_PINK};
+  }
+
+  .tags {
     border-color: ${COLOR.PRIMARY_GREEN};
   }
+
   ${media.mobile`
-    width: 33.33%;
-    width: calc(100% / 3);
+    width: 25%;
+    width: calc(100% / 4);
     margin-right: 0;
   `};
 `;
@@ -110,6 +116,11 @@ class Menu extends Component {
         <MenuItem>
           <MenuLink to="/life" activeClassName="life" partiallyActive>
             Life
+          </MenuLink>
+        </MenuItem>
+        <MenuItem>
+          <MenuLink to="/tags" activeClassName="tags" partiallyActive>
+            Tags
           </MenuLink>
         </MenuItem>
       </MenuItems>

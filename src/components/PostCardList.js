@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PostCard from './PostCard';
+import { THEME_NAME } from '../constants/themes';
 import media from '../utils/mediaQueries';
 import * as R from 'ramda';
 
@@ -35,7 +36,10 @@ class PostCardList extends Component {
             date={R.path(['node', 'frontmatter', 'date'], item)}
             title={R.path(['node', 'frontmatter', 'title'], item)}
             desc={R.path(['node', 'frontmatter', 'description'], item)}
-            category={category}
+            category={
+              category ||
+              THEME_NAME[R.path(['node', 'frontmatter', 'templateKey'], item)]
+            }
           />
         ))}
       </Cards>
