@@ -1,13 +1,15 @@
 ---
 slug: css-dev-conf-2016-2
 templateKey: life-post
-cover: null
 title: 前進 CSS Dev Conf 2016 (下)
 date: 2018-04-22T08:20:00.000Z
 description: |-
   我們都是第一次去美國，想說既然去了德州，要不要去加州朝聖一下？
 
   有沒有機會到厲害的公司參觀看看？
+tags:
+  - css-dev-conf
+  - '2016'
 ---
 2016 的 10 月，
 
