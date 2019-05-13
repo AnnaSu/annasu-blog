@@ -12,7 +12,7 @@ import media from '../../utils/mediaQueries';
 const Cards = styled.ul`
   width: 700px;
   margin: 30px auto;
-  padding: 0;
+  padding: 10px;
   list-style: none;
   ${media.mobile`
     width: 100%;
@@ -25,6 +25,10 @@ const Card = styled.li`
   margin: 0 10px 10px;
   background-color: ${COLOR.WHITE};
   border: solid 1px ${COLOR.LIGHT_GRAY};
+
+  ${media.mobile`
+    margin: 0 5px 10px;
+  `};
 `;
 
 const CardLink = styled(Link)`
