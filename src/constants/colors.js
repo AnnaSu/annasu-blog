@@ -11,6 +11,7 @@ const COLOR = {
   PRIMARY_LIGHT_PINK: lighten(0.2, '#ffa48f'),
   PRIMARY_LIGHT_GREEN: lighten(0.2, '#72e5c5'),
   PRIMARY_LIGHT_RED: lighten(0.2, '#ea7d73'),
+  PRIMARY_DARK_GREEN: darken(0.3, '#72e5c5'),
   LOADING_PLACEHOLDER_BG: '#f6f7f8',
   FB: '#3b579d',
   TWITTIR: '#1DA1F2',

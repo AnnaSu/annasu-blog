@@ -10,8 +10,6 @@ import PostHeader from '../../components/PostHeader';
 import media from '../../utils/mediaQueries';
 
 const Cards = styled.ul`
-  display: flex;
-  flex-flow: row wrap;
   width: 700px;
   margin: 30px auto;
   padding: 0;
@@ -22,34 +20,61 @@ const Cards = styled.ul`
 `;
 
 const Card = styled.li`
-  flex: 1 auto;
-  height: 40px;
+  display: inline-block;
+  height: 80px;
   margin: 0 10px 10px;
-  text-align: center;
   background-color: ${COLOR.WHITE};
-  border-radius: 5px;
   border: solid 1px ${COLOR.LIGHT_GRAY};
 `;
 
 const CardLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   width: 100%;
-  height: 40px;
-  border-radius: 5px;
+  height: 80px;
+  min-width: 100px;
+  display: inline-block;
+  padding: 10px;
   text-decoration: none;
   color: ${COLOR.PRIMARY_FONT};
 
   &:hover {
-    color: ${COLOR.WHITE};
-    background-color: ${THEME_COLOR['tags']}
+    &::after {
+      display: block;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: white ${COLOR.PRIMARY_DARK_GREEN};
+  }
+
+  &:hover, &:active {
+    background-color: ${THEME_COLOR['tags']};
+
+    > p {
+      color: ${COLOR.PRIMARY_DARK_GREEN};
+    }
   }
 `;
 
-const Name = styled.p`
-  font-size: 14px;
+const Name = styled.h3`
+  font-size: 16px;
+  font-weight: 700;
   margin: 0;
+`;
+
+const Count = styled.p`
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: ${COLOR.GRAY};
 `;
 
 const TagsPage = ({
@@ -67,7 +92,8 @@ const TagsPage = ({
       {group.map((tag, index) => (
         <Card key={tag.fieldValue}>
           <CardLink to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-            <Name>{`${tag.fieldValue} (${tag.totalCount})`}</Name>
+            <Name>{tag.fieldValue}</Name>
+            <Count>{`${tag.totalCount} posts`}</Count>
           </CardLink>
         </Card>
       ))}
