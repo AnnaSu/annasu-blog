@@ -6,7 +6,7 @@ import COLOR from '../constants/colors';
 import IconFb from './Icons/FB';
 import IconTwitter from './Icons/Twitter';
 
-const Links = styled.div`
+const Links = styled.nav`
   display: block;
   ${props => media.mobile`
     display: ${props.showWithMobile ? 'block' : 'none'};`};

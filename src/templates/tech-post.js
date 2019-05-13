@@ -22,7 +22,7 @@ export const TechPostTemplate = ({
 }) => {
   const color = THEME_COLOR[category];
   return (
-    <div>
+    <React.Fragment>
       {helmet}
       <PostArticle
         title={title}
@@ -41,7 +41,7 @@ export const TechPostTemplate = ({
         url={url}
         hashTags={tags.join(',')}
       />
-    </div>
+    </React.Fragment>
   );
 };
 

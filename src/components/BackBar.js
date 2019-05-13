@@ -8,7 +8,7 @@ import COLOR from '../constants/colors';
 import ShareLinks from './ShareLinks';
 import IconBack from './Icons/Back';
 
-const Wrap = styled.div`
+const Wrap = styled.nav`
   display: none;
   ${media.mobile`
     position: fixed;

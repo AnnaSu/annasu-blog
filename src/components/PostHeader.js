@@ -4,7 +4,7 @@ import IconTag from './Icons/Tag';
 import { THEME_COLOR } from '../constants/themes';
 import media from '../utils/mediaQueries';
 
-const Wrap = styled.div`
+const Wrap = styled.header`
   width: 700px;
   margin: 10px auto -30px;
   ${media.mobile`

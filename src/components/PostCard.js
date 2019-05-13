@@ -33,7 +33,7 @@ const Date = styled.p`
   color: ${COLOR.GRAY};
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   ${ellipsis('650px')};
   padding: 0 15px;
   font-size: 18px;

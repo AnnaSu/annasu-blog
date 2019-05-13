@@ -4,7 +4,7 @@ import Menu from './Menu';
 import COLOR from '../constants/colors';
 import Logo from './Logo';
 
-const Wrap = styled.div`
+const Wrap = styled.header`
   position: relative;
   width: 100%;
   height: 90px;

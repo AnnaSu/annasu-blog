@@ -59,7 +59,7 @@ const TemplateWrapper = ({ children }) => {
             <meta property="fb:app_id" content="289180075235583" />
           </Helmet>
           <Header scroll$={scroll$} />
-          <div>{children}</div>
+          <main>{children}</main>
           <ScrollTopButton scroll$={scroll$} />
         </React.Fragment>
       )}

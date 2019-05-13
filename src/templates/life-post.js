@@ -22,7 +22,7 @@ export const LifePostTemplate = ({
 }) => {
   const color = THEME_COLOR[category];
   return (
-    <div>
+    <React.Fragment>
       {helmet}
       <PostArticle
         title={title}
@@ -41,7 +41,7 @@ export const LifePostTemplate = ({
         url={url}
         hashTags={tags.join(',')}
       />
-    </div>
+    </React.Fragment>
   );
 };
 

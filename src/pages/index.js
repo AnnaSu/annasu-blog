@@ -12,7 +12,7 @@ const pageInfo = {
   description: '紀錄程式碼與生活',
 };
 
-const Wrap = styled.div`
+const Wrap = styled.article`
   margin: 50px auto;
   text-align: center;
 `;
