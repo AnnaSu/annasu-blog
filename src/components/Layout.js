@@ -29,7 +29,7 @@ const TemplateWrapper = ({ children }) => {
           <GlobalStyle />
           <Helmet>
             <html lang="zh-Hant-TW" />
-            <title>{title}</title>
+            <title>Anna Su notes (^_^) {title}</title>
             <meta name="description" content={description} />
             <link
               rel="apple-touch-icon"

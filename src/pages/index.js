@@ -8,7 +8,7 @@ import Layout from '../components/Layout';
 import media from '../utils/mediaQueries';
 
 const pageInfo = {
-  title: '關於 Anna Su',
+  title: '關於 Anna Su (^_^) Anna Su notes',
   description: '紀錄程式碼與生活',
 };
 
