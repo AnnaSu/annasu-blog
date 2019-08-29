@@ -1,7 +1,7 @@
 ---
 slug: styled-system
 templateKey: tech-post
-cover: /img/cleanshot-2019-08-29-at-13.59.46-2x.png
+cover: /img/cleanshot-2019-08-29-at-19.10.12-2x.png
 title: We need a better UI component library - Styled System
 date: 2019-08-29T05:53:32.782Z
 description: >-
