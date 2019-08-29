@@ -25,8 +25,14 @@ export const PROJECTS = [
 
 export const EXPERIENCES = [
   {
+    LOGO: '/img/logo_branch8.png',
+    COMPANY: 'Branch8',
+    TITLE: 'Senior Software Engineer',
+    URL: 'https://www.branch8.com',
+  },
+  {
     LOGO: '/img/logo_pixnet.png',
-    COMPANY: 'PIXNET Digital Media CORP.',
+    COMPANY: 'PIXNET',
     TITLE: 'Senior Front-End Web Development',
     URL: 'https://www.linkedin.com/company/pixnet-digital-media-corporation',
   },

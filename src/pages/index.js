@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import COLOR from '../constants/colors';
-import { PROJECTS, EXPERIENCES } from '../constants/abouts';
+import { EXPERIENCES } from '../constants/abouts';
 import SocialGroup from '../components/SocialGroup';
 import Layout from '../components/Layout';
 import media from '../utils/mediaQueries';
@@ -62,7 +62,7 @@ const Galleries = styled.ul`
 `;
 
 const Gallery = styled.li`
-  width: 220px;
+  width: 215px;
 `;
 
 const LogoLink = styled.a.attrs({
@@ -128,17 +128,11 @@ class index extends Component {
           <Article>
             <Desc>Hello, I am Anna Su, a front-end developer.</Desc>
             <Desc>
-              <Line>
-                喜歡做網站的前端工程師，熱衷於視覺介面與程式功能的實踐，
-              </Line>
-              <Line>
-                期許能在工作中發揮熱情，在工作之餘也能充實自己、持續的進修。
-              </Line>
+              <Line>喜歡做網站的前端工程師，熱衷於視覺介面與程式功能的實踐，</Line>
+              <Line>期許能在工作中發揮熱情，在工作之餘也能充實自己、持續的進修。</Line>
             </Desc>
             <Desc>
-              <Line>
-                不夠聰明，那麼就努力一點吧！希望可以透過筆記，紀錄工作與生活的心得，
-              </Line>
+              <Line>不夠聰明，那麼就努力一點吧！希望可以透過筆記，紀錄工作與生活的心得，</Line>
               <Line>學習、思考、內化、累積、分享，與大家共同成長！</Line>
             </Desc>
           </Article>
@@ -146,28 +140,12 @@ class index extends Component {
             <Section>
               <Title>Skills</Title>
               <SubTitle>HTML & CSS</SubTitle>
-              <Desc>HTML(5) / CSS(3) / Sass / PostCSS / Susy</Desc>
+              <Desc>HTML(5) / CSS(3) / Sass / PostCSS</Desc>
               <SubTitle>JavaScript</SubTitle>
-              <Desc>
-                React (Redux) / StoryBook / CSS Module / Redux Observable /
-                Service Worker
-              </Desc>
+              <Desc>React / React Apollo / GraphQL / StoryBook / Styled Components / Service Worker</Desc>
               <SubTitle>Other</SubTitle>
               <Desc>Webpack / Babel / NodeJS / Nginx</Desc>
             </Section>
-          </Article>
-          <Article>
-            <Title>Projects</Title>
-            <Galleries>
-              {PROJECTS.map((project, index) => (
-                <Gallery key={`projects_${index}`}>
-                  <LogoLink url={project.URL}>
-                    <Logo logo={project.LOGO} />
-                  </LogoLink>
-                  <Desc>{project.DESC}</Desc>
-                </Gallery>
-              ))}
-            </Galleries>
           </Article>
           <Article>
             <Title>Experience</Title>
