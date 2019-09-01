@@ -70,7 +70,7 @@ Styled System 大約是 2017 開始推出，到 2018 的 [第 2 版](https://git
 - RWD 元件開發複雜
   - 我個人覺得要客製化 RWD 元件，其實蠻麻煩的，你可能需要寫下面這樣的程式碼，根據不同設備重新再寫一次樣式做修改。
 
-```
+```javascript
 const Article = styled.div`
   width: 100%;
   …
