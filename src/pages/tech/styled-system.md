@@ -120,7 +120,7 @@ const Article = styled.div`
 5. 假設有某個元件的樣式，是跟其他專案 theme 定義都不一樣的話怎麼辦？ 
 6. 簡報範例都是 React 搭配 styled components，那除了 React 其他 JS 框架也可以使用 Styled System 嗎？
 
-最後有跟大家分享『錘子理論』，如果你手裡只有一把錘子，那你看什麼東西都像釘子。
+最後跟大家分享『錘子理論』，如果你手裡只有一把錘子，那你看什麼東西都像釘子。
 
 > Maslow's hammer - if all you have is a hammer, everything looks like a nail
 
