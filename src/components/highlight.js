@@ -44,9 +44,13 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
+	padding: 5px 8px;
+  color: #526367;
+  background-color: #e6e6e6;
 	border-radius: .3em;
 	white-space: normal;
+  text-shadow: none;
+  font-family: Lucida Console, Courier, monospace;
 }
 
 .token.comment,
