@@ -71,7 +71,7 @@ Styled System 大約是 2017 開始推出，到 2018 的 [第 2 版](https://git
 - RWD 元件開發複雜
   - 我個人覺得要客製化 RWD 元件，其實蠻麻煩的，你可能需要寫下面這樣的程式碼，根據不同設備重新再寫一次樣式做修改。
 
-```
+```javascript
 const Article = styled.div`
   width: 100%;
   …
@@ -91,7 +91,7 @@ const Article = styled.div`
 
 ## Styled System 可以幫我們解決什麼問題
 
-透過簡報前面提到的範例，重新透過 Styled System 改寫之後，可以發現：
+觀察簡報裡面的範例，重新透過 Styled System 改寫之後，可以發現：
 
 - 大幅降低 props 命名或格式不一致的問題
 - 更好的抽象化樣式，程式碼變得更少
@@ -101,7 +101,7 @@ const Article = styled.div`
 
 我們可以直接在元件上定義排版/字級/顏色/RWD 等樣式，例如：
 
-```
+```jsx
 <Box m={2} />
 <Box p={[2, 3]} />
 <Box fontSize={[1, 2]} />
@@ -136,7 +136,7 @@ const Article = styled.div`
 
 案例 1: `透過 2 的次方去定義 space` 
 
-```
+```javascript
 space: [1, 2, 4, 8, 16, 32, 64]
 ```
 
@@ -144,7 +144,7 @@ use: `${themeGet('space.3')}`  => 2 的 3 次方是 8, 所以 `space.3`，會拿
 
 彈性使用：實務上因為會大量用到 0, 可以多塞一個 0，在使用的時候就是去思考 2 的次方再加 1
 
-```
+```javascript
 space: [0, 1, 2, 4, 8, 16, 32, 64]
 ```
 
@@ -155,7 +155,7 @@ use: `${themeGet('space.4')}`  => 當 index 等於 4，會拿到 8px
 
 案例 2: `使用遞減方式定義黑白階顏色，方便擴充與使用`
 
-```
+```javascript
 colors: {
   blacks: [
     BLACK,
@@ -188,7 +188,7 @@ colors: {
 
 解決方案二：如果有明確的用途，可以直接使用 Object 去定義，例如：
 
-```
+```javascript
 colors: {
 ...
   primary: '#62c8e0',
@@ -202,7 +202,7 @@ colors: {
 }
 ```
 
-```
+```javascript
 fontWeights: {
   normal: 400,
   semibold: 600,
