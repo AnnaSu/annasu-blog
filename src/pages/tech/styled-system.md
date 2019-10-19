@@ -221,6 +221,17 @@ fontWeights: {
 
 ---
 
+## 延伸閱讀
+
+- https://jxnblk.com/
+- https://github.com/styled-system/styled-system/blob/master/CHANGELOG.md
+- https://styled-system.com/guides/migrating/
+- https://github.com/styled-system/styled-system/releases/tag/v2.0.0
+- https://github.com/styled-system/styled-system/releases/tag/v5.0.0
+- https://en.wikipedia.org/wiki/Law_of_the_instrument#Abraham_Maslow
+
+---
+
 最後跟大家分享『錘子理論』，如果你手裡只有一把錘子，那你看什麼東西都像釘子。
 
 > Maslow's hammer - if all you have is a hammer, everything looks like a nail
@@ -230,13 +241,4 @@ fontWeights: {
 經過技術的迭代，光是 CSS 的架構方法就有像是 OOCSS/BEM/CSS Modules/Styled Components 等，都是希望能夠改善命名、優化效能、提高程式碼易讀性、增加重用程度等等、讓程式碼做更好的抽象化。
 
 不要對熟悉的工具有過度的依賴，當然也不要為了追求新技術而去使用，大家可以思考 Styled System 是不是真的適合應用在目前的專案裡？ 或許 Styled System 不是你現在的靈藥，但是希望未來會是你其中一個很棒的選擇 🤠
-
-## 延伸閱讀
-
-- https://jxnblk.com/
-- https://github.com/styled-system/styled-system/blob/master/CHANGELOG.md
-- https://styled-system.com/guides/migrating/
-- https://github.com/styled-system/styled-system/releases/tag/v2.0.0
-- https://github.com/styled-system/styled-system/releases/tag/v5.0.0
-- https://en.wikipedia.org/wiki/Law_of_the_instrument#Abraham_Maslow
 
