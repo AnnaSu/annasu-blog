@@ -1,10 +1,17 @@
+/* PrismJS 1.17.1
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript */
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
 export const highlight = () => `
 code[class*="language-"],
-pre {
-	color: #f8f8f2;
+pre[class*="language-"] {
+	color: #ccc;
 	background: none;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -20,19 +27,19 @@ pre {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+
 }
 
 /* Code blocks */
-pre {
+pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
-	border-radius: 0.3em;
 }
 
 :not(pre) > code[class*="language-"],
-pre {
-	background: #272822;
+pre[class*="language-"] {
+	background: #2d2d2d;
 }
 
 /* Inline code */
@@ -43,65 +50,61 @@ pre {
 }
 
 .token.comment,
+.token.block-comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: slategray;
+	color: #999;
 }
 
 .token.punctuation {
-	color: #f8f8f2;
+	color: #ccc;
 }
 
-.namespace {
-	opacity: .7;
-}
-
-.token.property,
 .token.tag,
-.token.constant,
-.token.symbol,
+.token.attr-name,
+.token.namespace,
 .token.deleted {
-	color: #f92672;
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
 }
 
 .token.boolean,
-.token.number {
-	color: #ae81ff;
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
 }
 
 .token.selector,
-.token.attr-name,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
 .token.string,
 .token.char,
-.token.builtin,
-.token.inserted {
-	color: #a6e22e;
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
 }
 
 .token.operator,
 .token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	color: #f8f8f2;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-	color: #e6db74;
-}
-
-.token.keyword {
-	color: #66d9ef;
-}
-
-.token.regex,
-.token.important {
-	color: #fd971f;
+.token.url {
+	color: #67cdcc;
 }
 
 .token.important,
@@ -114,5 +117,9 @@ pre {
 
 .token.entity {
 	cursor: help;
+}
+
+.token.inserted {
+	color: green;
 }
 `;
