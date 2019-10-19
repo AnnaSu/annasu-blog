@@ -70,6 +70,7 @@ const StyledContent = styled.div`
     list-style: none;
 
     li {
+      line-height: 2;
       &::before {
         content: '•';
         padding-right: 15px;
@@ -103,6 +104,7 @@ const StyledContent = styled.div`
 
     li {
       counter-increment: li;
+      line-height: 2;
 
       &::before {
         content: counter(li) '.';
@@ -112,12 +114,13 @@ const StyledContent = styled.div`
 
       p {
         display: inline;
+        line-height: 2;
       }
     }
   }
 
   p > code {
-    padding: 5px;
+    padding: 5px 8px;
     background-color: ${COLOR.LIGHT_GRAY};
   }
 `;
