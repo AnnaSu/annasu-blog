@@ -71,6 +71,8 @@ const StyledContent = styled.div`
 
     li {
       line-height: 2;
+      word-break: break-word;
+
       &::before {
         content: '•';
         padding-right: 15px;
@@ -105,6 +107,7 @@ const StyledContent = styled.div`
     li {
       counter-increment: li;
       line-height: 2;
+      word-break: break-word;
 
       &::before {
         content: counter(li) '.';
