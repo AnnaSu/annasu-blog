@@ -50,7 +50,7 @@ tags:
   - 如果我們必須根據不同狀態顯示不同樣式，為了讓程式碼更簡潔，可能需要寫一個 higher order function，傳入樣式的 object 和當前的狀態，使用元件時，再透過這個 function 定義樣式。
   - 當元件的樣式更複雜時，例如按鈕有不同特定樣式（Default/Primary/Danger）和尺寸（Default/Small/Large），那要怎麼寫比較好？
 - RWD 元件開發複雜
-  - 我個人覺得要客製化 RWD 元件，其實蠻麻煩的，你可能需要寫下面這樣的程式碼，根據不同設備重新再寫一次樣式做修改。
+  - 你可能需要寫下面這樣的程式碼，根據不同設備重新再寫一次樣式做修改。
 
 ```javascript
 const Article = styled.div`
