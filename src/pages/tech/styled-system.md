@@ -8,15 +8,12 @@ description: >-
   我們開發網站時，可能會使用 UI Library 讓專案開發更有效率，例如：早期的動態網站，透過 Bootstrap 或是 Pure CSS 等 CSS
   Framework ，幫助我們快速建立網站。
 
-
   但隨著前端技術的演進，SPA （Single Page Application）架構興起，這些 CSS Framework
   已經不太適合在「元件化」的專案裡使用，我們可能需要自己封裝，或是使用已經封裝好的 UI Library。
-
 
   像是 Material-UI、Ant Design 等元件化的 UI Library，能夠讓我們直接透過 JavaScript 套用 UI
   Library，可以更方便使用別人撰寫好的樣式，但同時也失去了彈性，如果需要開發客製化的網站，我們不再像以前可以直接的修改 HTML 結構或是 CSS
   樣式，使用這些 UI Component Libraries 反而提高專案維護的困難度。
-
 
   如今我們希望能夠有一套 UI component Library 可以同時具有元件化的方便性，又能夠達成客製化的需求，透過 Styled System
   幫助我們建立更有彈性的元件，組裝出屬於自己風格的網站！
@@ -27,13 +24,15 @@ tags:
 
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="//speakerdeck.com/player/d19639e8f6744ffa834c67f4640f815c" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
 
+## 前言
+
 
 我們開發網站時，可能會使用 UI Library 讓專案開發更有效率，例如：早期的動態網站，透過 Bootstrap 或是 Pure CSS 等 CSS Framework ，幫助我們快速建立網站。
 但隨著前端技術的演進，SPA （Single Page Application）架構興起，這些 CSS Framework 已經不太適合在「元件化」的專案裡使用，我們可能需要自己封裝，或是使用已經封裝好的 UI Library。
-像是 Material-UI、Ant Design 等元件化的 UI Library，能夠讓我們直接透過 JavaScript 套用 UI Library，可以更方便使用別人撰寫好的樣式，但同時也失去了彈性，如果需要開發客製化的網站，我們不再像以前可以直接的修改 HTML 結構或是 CSS 樣式，使用這些 UI Component Libraries 反而提高專案維護的困難度。
-如今我們希望能夠有一套 UI component Library 可以同時具有元件化的方便性，又能夠達成客製化的需求，透過 Styled System 幫助我們建立更有彈性的元件，組裝出屬於自己風格的網站！
 
-## 前言
+像是 Material-UI、Ant Design 等元件化的 UI Library，讓我們能夠直接透過 JavaScript 套用 UI Library，可以更方便使用別人撰寫好的樣式，但同時也失去了彈性，如果需要開發客製化的網站，我們不再像以前可以直接的修改 HTML 結構或是 CSS 樣式，使用這些 UI Component Libraries 反而提高專案維護的困難度。
+
+如今我們希望能夠有一套 UI component Library 可以同時具有元件化的方便性，又能夠達成客製化的需求，透過 Styled System 幫助我們建立更有彈性的元件，組裝出屬於自己風格的網站！
 
 Styled System 大約是 2017 開始推出，到 2018 的 [第 2 版](https://github.com/styled-system/styled-system/releases/tag/v2.0.0) 比較穩定，
 今年 6 月出 [第 5 版](https://github.com/styled-system/styled-system/releases/tag/v2.0.0)，主要開發者是 [Brent Jackson](https://twitter.com/jxnblk)， Jackson 其他的專案還有 Theme UI/MDX Deck/Rebass，同時也是 GatsbyJS 的開發者。
@@ -43,7 +42,7 @@ Styled System 大約是 2017 開始推出，到 2018 的 [第 2 版](https://git
 
 ## Ui library 的迭代演化與優缺點
 
-在元件化的時代，不知道大家有沒有發現，不管你是用 React/Vue.js/Angular，我們一直在刻元件，在不同專案裡有可能一直重複做同樣功能的元件，或者直接使用現成的元件，但只有樣式做調整，例如 Button, Checkbox, Radio button, Modal, Carousel 等元件，當然還是有可能有特殊情況，但我們可以觀察到大部分元件的行為是一致的。
+在元件化的時代，不知道大家有沒有發現，不管你是用 React/Vue.js/Angular，我們一直在刻元件，在不同專案裡有可能一直重複做同樣功能的元件，或者直接使用現成的元件，但只有樣式做調整，例如 Button, Checkbox, Radio button, Modal, Carousel 等元件，當然還是有特殊情況，但我們可以觀察到大部分元件的行為是一致的。
 
 我們先回過頭來想想，通常我們啟動一個新專案，如何評估技術可行性？
 
@@ -59,7 +58,7 @@ Styled System 大約是 2017 開始推出，到 2018 的 [第 2 版](https://git
 
 ## 客製化元件所遭遇的困難 
 - 傳入 props 命名不一致
-  - 使用元件時，傳遞 props 資料所使用的 props 名稱不一致，容易造成開發者的困惑。
+  - 使用元件時，傳遞 props 名稱不一致，容易造成開發者的困惑。
 
 - 客製化樣式需傳入對應的 props，程式碼很繁冗
   - 假如我們今天要做一個樣式非常彈性的元件，搭配 styled-components 需要寫 function 傳入 props 去設定特定樣式，寫很多重複的程式碼。
@@ -112,12 +111,8 @@ const Article = styled.div`
 
 ## 使用 Styled System 開發專案的心得
 
-公司專案是在今年年初時採用 Styled System 開發，目前正和同仁們努力將我們做好的 UI Library 應用在不同的專案中，整理自己開發的心得以及會眾提出很棒的問題，整理如下：
+公司專案是在今年年初時採用 Styled System 開發，目前正和同仁們努力將我們做好的 UI Library 應用在不同的專案中，將自己開發的心得以及會眾提出很棒的問題，整理如下：
 
-### 如果專案一開始，PM 或設計師提供的資訊不完整怎麼辦？
-在實際專案中，我們的確很容易發生需求不夠明確、文件不足的狀況，此時溝通就會變得很重要，如果執行的工程師能夠主動提出關鍵問題並給予對應的解決方案，提供選項幫助對方抉擇，如此一來，就可以更快速的確認基本的需求再去規劃專案的架構。
-### 元件的功能很複雜，自己實作的話，需要花很多時間，時程真的來不及，要怎麼取捨？
-仍然可以去找滿足基本功能的現成 library 再去封裝成自己的元件、達到客製化的需求並符合時程，但還是要確認當前的需求，考量修改與維護的成本再取捨。
 
 ### 什麼情況下適合導入 Styled System？
 簡單的來說是希望將專案做系統化的產品，功能相似，但樣式可以彈性修改，例如：
@@ -125,6 +120,12 @@ const Article = styled.div`
 - 不同公司或專案，但是有相似的功能
 
 建議是與公司同仁取得共識，因為需要專案裡每個角色都互相配合，共同定義規範、討論需變動的規格等細節。
+
+### 如果 PM 或設計師提供的資訊不完整怎麼辦？
+在實際專案中，我們的確很容易發生需求不夠明確、文件不足的狀況，此時溝通就會變得很重要，如果執行的工程師能夠主動提出關鍵問題並給予對應的解決方案，提供選項幫助對方抉擇，如此一來，就可以更快速的確認基本的需求並規劃專案的架構。
+
+### 元件的功能很複雜，自己實作的話，需要花很多時間，時程真的來不及，要怎麼取捨？
+仍然可以去找滿足基本功能的現成 library 再去封裝成自己的元件、達到客製化的需求並符合時程，但還是要確認當前的需求，考量修改與維護的成本再取捨。
 
 ### theme 透過 array 設定樣式時，在使用時較難對應，這樣在寫的時候是不是很麻煩？
 - 例如： `space: [0, 1, 4, 8, 12, 16, 24, 32]`
@@ -211,13 +212,13 @@ fontWeights: {
 
 結論：和設計師討論，共同定義並盡量使用規範內的數值去做設計與開發，依據能夠彈性的客製化樣式為原則，如果有例外也沒關係，就不使用 theme 的值即可。
 
-### 簡報範例都是 React 搭配 styled-components，那除了 React 其他 JS 框架也可以使用 Styled System 嗎？
+### 簡報範例都是 React 搭配 styled-components，其他 JS 框架也可以使用 Styled System 嗎？
 
 [styled-system](https://github.com/styled-system/styled-system) 是近年來新推出的 library，作者是基於 React 去開發，所以無論是版本或功能相對起來完善很多。
 
 基本上 Vue 也支援 Styled System，但現階段，如果你要在 Vue 的技術裡，導入 styled-system，可能要等其他大神開發的專案更穩定，或者自己嘗試做一個。
 
-作者有將專案開源，也有提供 [Documentation](https://styled-system.com/)，所以仍然可以參考他的架構，思考在現有專案與技術裡，該如何去改善。
+Styled System 是開源專案，也有提供 [Documentation](https://styled-system.com/)，所以仍然可以參考他的架構，思考在現有專案與技術裡，該如何去改善。
 
 ---
 
