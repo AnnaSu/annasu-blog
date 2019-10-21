@@ -10,7 +10,7 @@ tags:
 
 公司專案是在今年年初時導入 Styled System 開發，目前正和同仁們努力將我們做好的 UI Library 應用在不同的專案中，接續上一篇 [We need a better UI component library - Styled System](https://anna-su.com/tech/styled-system/)
 
-將 Styled System 的開發心得以及 2019 Modern Web 會眾提出的問題，整理成 Q&A，此篇會不定期更新喔！
+本篇文章將 Styled System 的開發心得以及 2019 Modern Web 會眾提出的問題，整理成 Q&A，內容會不定期更新喔！
 
 
 
