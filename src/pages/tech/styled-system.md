@@ -79,6 +79,7 @@ const Article = styled.div`
 
 ## Styled System 介紹
 [styled-system](https://github.com/styled-system/styled-system) 是開源專案，2017 Release [第 1 版](https://github.com/styled-system/styled-system/releases/tag/v1.0.0)，到 2018 的 [第 2 版](https://github.com/styled-system/styled-system/releases/tag/v2.0.0) 比較穩定，2019 6 月出 [第 5 版](https://github.com/styled-system/styled-system/releases/tag/v2.0.0)，作者 [Brent Jackson](https://twitter.com/jxnblk) 同時也是 GatsbyJS 的貢獻者。
+
 將簡報提到的基本案例，[重新透過 Styled System 改寫](https://speakerdeck.com/annasu/we-need-a-better-ui-component-library-styled-system?slide=68) 之後，可以發現：
 
 - 大幅降低 props 命名或格式不一致的問題
