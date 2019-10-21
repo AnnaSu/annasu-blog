@@ -17,8 +17,12 @@ description: >
   幫助我們建立更有彈性的元件，組裝出屬於自己風格的網站！
 tags:
   - Styled System
+  - Modern Web
+  - '2019'
 ---
-## Side<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="//speakerdeck.com/player/d19639e8f6744ffa834c67f4640f815c" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
+## Side
+
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="//speakerdeck.com/player/d19639e8f6744ffa834c67f4640f815c" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
 
 ## 前言
 不知道大家有沒有發現，在元件化的時代，無論你是使用 React/Vue.js/Angular，在不同專案裡可能一直重複做同樣功能的元件，只有樣式需要被改變，例如 Button、Checkbox、Radio button、Modal、Carousel 等，我們觀察到大部分元件的行為是一致的，是否能夠彈性的變更樣式？要如何讓我們開發專案更有效率？
