@@ -19,6 +19,8 @@ tags:
   - Styled System
   - Modern Web
   - '2019'
+  - React
+  - Styled Components
 ---
 ## Side
 
