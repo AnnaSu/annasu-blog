@@ -1,6 +1,7 @@
 ---
 slug: remote-work
 templateKey: life-post
+cover: /img/remote-work.jpg
 title: 遠端工作後，對我的生活帶來什麼改變？
 date: 2019-11-06T13:37:14.415Z
 description: 遠端工作一年多了，想要回顧自己在這段期間的變化。
