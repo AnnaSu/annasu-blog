@@ -120,6 +120,13 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
+        cover {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 60) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
         date(formatString: "MMMM DD, YYYY")
         title
         description
