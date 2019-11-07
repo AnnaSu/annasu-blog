@@ -50,6 +50,7 @@ class index extends Component {
     const {
       data: { markdownRemark: post },
     } = this.props;
+    console.log('post:', post);
     const title = R.pathOr('', ['frontmatter', 'title'], post);
     const description = R.pathOr('', ['frontmatter', 'description'], post);
     const tags = R.pathOr([], ['frontmatter', 'tags'], post);
@@ -64,6 +65,7 @@ class index extends Component {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
+        {/* <meta property="og:image" content="/img/og-image.png" /> */}
         <script type="application/ld+json">{`
                        {
                         "@context": "http://schema.org/",
