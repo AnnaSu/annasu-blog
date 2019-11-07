@@ -50,7 +50,6 @@ class index extends Component {
     const {
       data: { markdownRemark: post },
     } = this.props;
-    console.log('post:', post);
     const title = R.pathOr('', ['frontmatter', 'title'], post);
     const description = R.pathOr('', ['frontmatter', 'description'], post);
     const tags = R.pathOr([], ['frontmatter', 'tags'], post);
