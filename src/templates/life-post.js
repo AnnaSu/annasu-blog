@@ -57,6 +57,7 @@ class index extends Component {
     const date = R.pathOr('', ['frontmatter', 'date'], post);
     const slug = R.pathOr('/', ['fields', 'slug'], post);
     const url = CLIENT_ENDPOINT + slug;
+    const cover = CLIENT_ENDPOINT + R.pathOr('', ['frontmatter', 'cover', 'childImageSharp', 'fluid', 'src'], post);
     const html = R.pathOr('', ['html'], post);
     const helmet = (
       <Helmet>
@@ -65,7 +66,7 @@ class index extends Component {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
-        {/* <meta property="og:image" content="/img/og-image.png" /> */}
+        <meta property="og:image" content={cover} />
         <script type="application/ld+json">{`
                        {
                         "@context": "http://schema.org/",
