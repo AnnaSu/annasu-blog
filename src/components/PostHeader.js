@@ -14,6 +14,7 @@ const Wrap = styled.header`
 
 const Icon = styled.div`
   display: inline-block;
+  margin-right: 5px;
   vertical-align: sub;
 
   svg g {

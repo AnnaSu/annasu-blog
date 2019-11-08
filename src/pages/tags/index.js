@@ -12,8 +12,9 @@ import media from '../../utils/mediaQueries';
 const Cards = styled.ul`
   width: 700px;
   margin: 30px auto;
-  padding: 10px;
+  padding: 0;
   list-style: none;
+
   ${media.mobile`
     width: 100%;
   `};
@@ -22,7 +23,8 @@ const Cards = styled.ul`
 const Card = styled.li`
   display: inline-block;
   height: 80px;
-  margin: 0 10px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   background-color: ${COLOR.WHITE};
   border: solid 1px ${COLOR.LIGHT_GRAY};
 
