@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import COLOR from '../constants/colors';
+import { kebabCase } from 'lodash';
 // import scrollTop from '../utils/scrollTop';
 
 const TagList = styled.ul`
@@ -45,7 +46,7 @@ class Tags extends Component {
       <TagList>
         {tags.map((tag, index) => (
           <TagItem key={tag} color={color}>
-            <TagLink to={`/tags/${tag}`} color={color}>
+            <TagLink to={`/tags/${kebabCase(tag)}/`} color={color}>
               {tag}
             </TagLink>
           </TagItem>
