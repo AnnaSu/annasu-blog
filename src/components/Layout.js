@@ -28,7 +28,7 @@ const TemplateWrapper = ({ children }) => {
         <React.Fragment>
           <GlobalStyle />
           <Helmet>
-            <html lang="zh-Hant-TW" />
+            <html lang="zh-Hant" />
             <title>Anna Su notes (^_^) {title}</title>
             <meta name="description" content={description} />
             <link
