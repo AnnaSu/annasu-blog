@@ -7,13 +7,14 @@ import { kebabCase } from 'lodash';
 
 const TagList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding-left: 15px;
   list-style: none;
 `;
 
 const TagItem = styled.li`
-  margin-right: 5px;
+  margin: 0 10px 10px 0;
   border: 1px solid ${props => props.color};
   border-radius: 4px;
 `;
