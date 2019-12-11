@@ -33,6 +33,8 @@ tags:
 
 隨著時代的演進，各種 UI library 一定會有好與不好的地方，我們來回顧過往的 CSS 技術，希望可以從中學習各自的優良部份。
 
+---
+
 ## UI library 的迭代演化與優缺點
 
 ### CSS Framework / UI Library
@@ -45,7 +47,11 @@ tags:
 
 ---
 
-接著在簡報中跟大家分享實務的 [基本範例](https://speakerdeck.com/annasu/we-need-a-better-ui-component-library-styled-system?slide=34) ，歸納開發（ `React` 搭配 `styled-components` ），將客製化元件時所遇到的問題整理如下：
+透過 `React` 搭配 `styled-components`，整理幾個基本範例 (可參考 [簡報內的範例](https://speakerdeck.com/annasu/we-need-a-better-ui-component-library-styled-system?slide=34) )。
+
+
+
+將客製化元件時所遇到的問題整理如下：
 
 ## 客製化元件所遭遇的困難
 ### props 命名
