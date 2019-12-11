@@ -17,19 +17,21 @@ description: >
   幫助我們建立更有彈性的元件，組裝出屬於自己風格的網站！
 tags:
   - Styled System
+  - Styled Component
   - Modern Web
-  - '2019'
-  - React
-  - Styled Components
 ---
 ## Side
 
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="//speakerdeck.com/player/d19639e8f6744ffa834c67f4640f815c" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
 
+上方簡報是我今年在 [Modern Web 2019](https://modernweb.tw/2019/agenda.html) 分享的主題，將部份重點整理成此篇文章。
+
+---
+
 ## 前言
 不知道大家有沒有發現，在元件化的時代，無論你是使用 React/Vue.js/Angular，在不同專案裡可能一直重複做同樣功能的元件，只有樣式需要被改變，例如 Button、Checkbox、Radio button、Modal、Carousel 等，我們觀察到大部分元件的行為是一致的，是否能夠彈性的變更樣式？要如何讓我們開發專案更有效率？
 
-隨著時代的演進，各種 UI library 一定會有好與不好的地方，希望可以從中學習各自的優良部份。
+隨著時代的演進，各種 UI library 一定會有好與不好的地方，我們來回顧過往的 CSS 技術，希望可以從中學習各自的優良部份。
 
 ## UI library 的迭代演化與優缺點
 
@@ -41,18 +43,23 @@ tags:
 
 使用現成的 Library，可以快速開發，但是無法因應特殊需求，反而提高專案維護的困難度，所以客製化元件成為許多企業選擇的解決方案。
 
-接著跟大家分享實務的 [基本範例](https://speakerdeck.com/annasu/we-need-a-better-ui-component-library-styled-system?slide=34) ，歸納開發（ `React` 搭配 `styled-components` ）客製化元件時所遇到的問題。
+---
+
+接著在簡報中跟大家分享實務的 [基本範例](https://speakerdeck.com/annasu/we-need-a-better-ui-component-library-styled-system?slide=34) ，歸納開發（ `React` 搭配 `styled-components` ），將客製化元件時所遇到的問題整理如下：
 
 ## 客製化元件所遭遇的困難
-- props 命名
-  - 使用元件時，傳遞 props 名稱不一致，容易造成開發者的困惑。
-- 客製化樣式需傳入對應的 props，程式碼很繁冗
-  - 假如需要開發樣式非常彈性的元件，搭配 styled-components 寫 function 傳入 props 去設定特定樣式，會寫很多重複的程式碼。
-- 不同狀態顯示不同樣式時，程式碼需要封裝
-  - 如果我們必須根據不同狀態顯示不同樣式，為了讓程式碼更簡潔，可能需要寫一個 higher order function，傳入樣式的 object 和當前的狀態，使用元件時，再透過這個 function 定義樣式。
-  - 當元件的樣式更複雜時，例如按鈕有不同特定樣式（Default/Primary/Danger）和尺寸（Default/Small/Large），那要怎麼寫比較好？
-- RWD 元件開發複雜
-  - 你可能需要寫下面這樣的程式碼，根據不同設備重新再寫一次樣式做修改。
+### props 命名
+  使用元件時，傳遞 props 名稱不一致，容易造成開發者的困惑。
+### 客製化樣式需傳入對應的 props，程式碼很繁冗
+  假如需要開發樣式非常彈性的元件，搭配 styled-components 寫 function 傳入 props 去設定特定樣式，會寫很多重複的程式碼。
+
+### 不同狀態顯示不同樣式時，程式碼需要封裝
+  如果我們必須根據不同狀態顯示不同樣式，為了讓程式碼更簡潔，可能需要寫一個 higher order function，傳入樣式的 object 和當前的狀態，使用元件時，再透過這個 function 定義樣式。
+
+  當元件的樣式更複雜時，例如按鈕有不同特定樣式（Default/Primary/Danger）和尺寸（Default/Small/Large），你可以試著思考看看，寫起來是否會變得非常麻煩？
+
+### RWD 元件開發複雜
+  你可能需要寫下面這樣的程式碼，根據不同設備重新再寫一次樣式做修改。
 
 ```javascript
 const Article = styled.div`
@@ -79,6 +86,8 @@ const Article = styled.div`
 
 所以我們希望有一套 UI component Library 可以同時具有元件化的方便性，又能夠達成客製化的需求，幫助我們建立更有彈性的元件。
 
+---
+
 ## Styled System 介紹
 [styled-system](https://github.com/styled-system/styled-system) 是開源專案，2017 Release [第 1 版](https://github.com/styled-system/styled-system/releases/tag/v1.0.0)，到 2018 的 [第 2 版](https://github.com/styled-system/styled-system/releases/tag/v2.0.0) 比較穩定，2019 6 月出 [第 5 版](https://github.com/styled-system/styled-system/releases/tag/v2.0.0)，作者 [Brent Jackson](https://twitter.com/jxnblk) 同時也是 GatsbyJS 的貢獻者。
 
@@ -100,6 +109,8 @@ const Article = styled.div`
 ```
 
 透過 Styled System，使用元件時，能夠直接設定樣式，變得非常直覺，但同時又能享受元件的語意化以及封裝好的樣式，程式碼更簡潔、組合更彈性、使用更方便，還能夠達成客製化的需求。
+
+---
 
 ## 使用 Styled System 開發專案的心得
 因為公司專案是在今年年初時導入 Styled System 開發，目前正和同仁們努力將我們做好的 UI Library 應用在不同的專案中，心得應該會越來越多，最後決定另外再寫一篇 [Q&A](https://anna-su.com/tech/styled-system-q-a/)，可能會不定期更新喔～
