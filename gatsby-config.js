@@ -5,6 +5,7 @@ module.exports = {
     title: 'Anna Su notes',
     description:
       '喜歡做網站的前端工程師，熱衷於視覺介面與程式功能的實踐，希望可以透過筆記，紀錄工作與生活的心得 ☺️',
+    siteUrl: 'https://anna-su.com/',
   },
   plugins: [
     {
@@ -16,6 +17,7 @@ module.exports = {
         pageTransitionDelay: 300,
       },
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
