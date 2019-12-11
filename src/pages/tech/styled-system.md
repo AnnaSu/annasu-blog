@@ -45,7 +45,9 @@ tags:
 
 使用現成的 Library，可以快速開發，但是無法因應特殊需求，反而提高專案維護的困難度，所以客製化元件成為許多企業選擇的解決方案。
 
-接著在簡報中大家分享實務的 [基本範例](https://speakerdeck.com/annasu/we-need-a-better-ui-component-library-styled-system?slide=34) ，歸納開發（ `React` 搭配 `styled-components` ），將客製化元件時所遇到的問題整理如下：
+---
+
+接著在簡報中跟大家分享實務的 [基本範例](https://speakerdeck.com/annasu/we-need-a-better-ui-component-library-styled-system?slide=34) ，歸納開發（ `React` 搭配 `styled-components` ），將客製化元件時所遇到的問題整理如下：
 
 ## 客製化元件所遭遇的困難
 ### props 命名
