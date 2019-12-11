@@ -7,6 +7,15 @@ module.exports = {
       '喜歡做網站的前端工程師，熱衷於視覺介面與程式功能的實踐，希望可以透過筆記，紀錄工作與生活的心得 ☺️',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-54270309-6',
+        head: false,
+        exclude: ['/admin/**'],
+        pageTransitionDelay: 300,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
