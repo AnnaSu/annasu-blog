@@ -17,10 +17,8 @@ description: >
   幫助我們建立更有彈性的元件，組裝出屬於自己風格的網站！
 tags:
   - Styled System
+  - Styled Component
   - Modern Web
-  - '2019'
-  - React
-  - Styled Components
 ---
 ## Side
 
