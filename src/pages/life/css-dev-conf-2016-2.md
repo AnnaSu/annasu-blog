@@ -14,7 +14,7 @@ tags:
 ---
 2016 的 10 月，
 
-我和同事 [前往德州參加 CSS Dev Conf 2016](http://anna-su.com/posts/life/%E5%89%8D%E9%80%B2-css-dev-conf-2016) ，
+我和同事 [前往德州參加 CSS Dev Conf 2016](https://anna-su.com/life/css-dev-conf-2016-1/) ，
 
 我們都是第一次去美國，想說既然去了德州，要不要去加州朝聖一下？
 
