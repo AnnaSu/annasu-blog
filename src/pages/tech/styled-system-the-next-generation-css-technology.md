@@ -1,6 +1,7 @@
 ---
 slug: styled-system-the-next-generation-css-technology
 templateKey: tech-post
+cover: /img/cleanshot-2019-08-29-at-19.10.12-2x.png
 title: 從 Styled System 看下一代 CSS 技術
 date: 2019-12-19T06:21:35.452Z
 description: |
