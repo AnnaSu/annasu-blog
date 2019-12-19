@@ -18,10 +18,6 @@ tags:
 
 簡報在上方 ☝️☝️☝️，之後我也會將小聚分享的內容，再寫一篇文章更新在這裡。
 
-另外，也感謝社群朋友的踴躍交流，
-
-我會再找時間更新 [Styled System 的開發心得與 Q&A](https://anna-su.com/tech/styled-system-q-a/)   (*´∀`)~♥
-
 ---
 
 ## 延伸閱讀
@@ -35,3 +31,9 @@ tags:
 - https://storybook.grommet.io/
 - https://github.com/grommet/design-kit
 - http://chakra-ui.com/
+
+---
+
+另外，也感謝社群朋友的踴躍交流，
+
+我會再找時間更新 [Styled System 的開發心得與 Q&A](https://anna-su.com/tech/styled-system-q-a/)   (*´∀`)~♥
