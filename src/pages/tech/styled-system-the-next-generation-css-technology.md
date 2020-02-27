@@ -17,7 +17,7 @@ tags:
 
 今年在 [Modern Web](https://anna-su.com/tech/styled-system/) 已經有分享過 Styled System 這個主題，但當時是大多是介紹基本應用，經過四個月、整理更多實務的開發與心得之後，這次在 [Reactjs.tw 社群小聚](https://reactjs.kktix.cc/events/react13) 分享。
 
-簡報在上方 ☝️☝️☝️，之後我也會將小聚分享的內容，再寫一篇文章更新在這裡。
+簡報在上方 ☝️☝️☝️，活動當天也有 [錄影](https://www.youtube.com/watch?v=7taHwFT9H3A)。
 
 ---
 
