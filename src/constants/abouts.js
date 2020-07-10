@@ -34,7 +34,7 @@ export const EXPERIENCES = [
     LOGO: '/img/logo_pixnet.png',
     COMPANY: 'PIXNET',
     TITLE: 'Senior Front-End Web Development',
-    URL: 'https://www.linkedin.com/company/pixnet-digital-media-corporation',
+    URL: 'https://www.pixnet.net',
   },
   {
     LOGO: '/img/logo_miniasp.png',
